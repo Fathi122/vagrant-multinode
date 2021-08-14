@@ -27,7 +27,6 @@ Vagrant.configure("2") do |config|
     config.vm.define vm_name do |node|
       node.vm.box = "ubuntu/focal64"
       node.vm.hostname = vm_name
-      #ip="#{static_ip}.#{10+i}"
       node.vm.network "private_network", ip: "#{static_ip}.#{10+i}"
     end
     # Run the SSH configuration script
