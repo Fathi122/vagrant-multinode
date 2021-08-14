@@ -9,7 +9,7 @@ $ansiblehosts = <<SCRIPT
 ANSIBLEHOSTSFILE=/etc/ansible/hosts
 echo "Adding new entry in ${ANSIBLEHOSTSFILE}"
 if [  -f "${ANSIBLEHOSTSFILE}" ];then
-sudo tee -a "${ANSIBLEHOSTSFILE}" >/dev/null <<'EOF'
+sudo tee -a "${ANSIBLEHOSTSFILE}" &>/dev/null <<'EOF'
 [ansible_client]
 node2 ansible_ssh_user=vagrant ansible_ssh_pass=vagrant
 EOF
