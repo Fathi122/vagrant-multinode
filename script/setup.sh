@@ -30,7 +30,6 @@ node_configuration ()
        StrictHostKeyChecking no
        UserKnownHostsFile=/dev/null
 EOF
-    echo ">>>> dumping ssh config"
     # Populate /etc/hosts with the IP and node names
     nodeend=$((10+$numnodes))
     for (( x=11; x<=$nodeend; x++ )); do
